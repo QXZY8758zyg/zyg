@@ -1,29 +1,29 @@
-1¡¢Æô¶¯µÄÊ±ºò£¬ÔÚÆô¶¯½çÃæ£¬ÏàÓ¦Æô¶¯Ïî£¬ÄÚºËÃû³ÆÉÏ°´¡°e¡±£»
-2¡¢½øÈëºó£¬ÕÒµ½linux16¿ªÍ·µÄµØ·½£¬°´¡°end¡±¼üµ½×îºó£¬ÊäÈëconsole=tty0 rd.break£¬°´ctrl+x½øÈë£»
-3¡¢½øÈ¥ºóÊäÈëÃüÁîmount£¬·¢ÏÖ¸ùÎª/sysroot/£¬²¢ÇÒ²»ÄÜĞ´£¬Ö»ÓĞro=readonlyÈ¨ÏŞ£»
-4¡¢mount -o remount,rw /sysroot/£¬ÖØĞÂ¹ÒÔØ£¬Ö®ºómount£¬·¢ÏÖÓĞÁËr,wÈ¨ÏŞ£»
-5¡¢chroot /sysroot/ ¸Ä±ä¸ù£»
-echo RedHat|passwd ¨Cstdin root ĞŞ¸ÄrootÃÜÂëÎªredhat
-»òÕßÊäÈëpasswd£¬½»»¥ĞŞ¸Ä£»
-6¡¢touch /.autorelabel Õâ¾äÊÇÎªÁËselinuxÉúĞ§
+1ã€å¯åŠ¨çš„æ—¶å€™ï¼Œåœ¨å¯åŠ¨ç•Œé¢ï¼Œç›¸åº”å¯åŠ¨é¡¹ï¼Œå†…æ ¸åç§°ä¸ŠæŒ‰â€œeâ€ï¼›
+2ã€è¿›å…¥åï¼Œæ‰¾åˆ°linux16å¼€å¤´çš„åœ°æ–¹ï¼ŒæŒ‰â€œendâ€é”®åˆ°æœ€åï¼Œè¾“å…¥console=tty0 rd.breakï¼ŒæŒ‰ctrl+xè¿›å…¥ï¼›
+3ã€è¿›å»åè¾“å…¥å‘½ä»¤mountï¼Œå‘ç°æ ¹ä¸º/sysroot/ï¼Œå¹¶ä¸”ä¸èƒ½å†™ï¼Œåªæœ‰ro=readonlyæƒé™ï¼›
+4ã€mount -o remount,rw /sysroot/ï¼Œé‡æ–°æŒ‚è½½ï¼Œä¹‹åmountï¼Œå‘ç°æœ‰äº†r,wæƒé™ï¼›
+5ã€chroot /sysroot/ æ”¹å˜æ ¹ï¼›
+echo RedHat|passwd â€“stdin root ä¿®æ”¹rootå¯†ç ä¸ºredhat
+æˆ–è€…è¾“å…¥passwdï¼Œäº¤äº’ä¿®æ”¹ï¼›
+6ã€touch /.autorelabel è¿™å¥æ˜¯ä¸ºäº†selinuxç”Ÿæ•ˆ
 
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+eg
 
 fdisk  /dev/vdb
-n ĞÂ½¨
-p ÁĞ³ö
-d É¾³ı
-w ±£´æ
-q ÍË³ö
-²é¿´´ÅÅÌ   lsblk
-»®·Ö·ÖÇø   fdisk
-Ë¢ĞÂ       partprobe
-¸ñÊ½»¯  mkfs.ext4    mkfs.xfs
-²é¿´ÎÄ¼şÏµÍ³  blkid
-¹ÒÔØÊ¹ÓÃ      mount 
+n æ–°å»º
+p åˆ—å‡º
+d åˆ é™¤
+w ä¿å­˜
+q é€€å‡º
+æŸ¥çœ‹ç£ç›˜   lsblk
+åˆ’åˆ†åˆ†åŒº   fdisk
+åˆ·æ–°       partprobe
+æ ¼å¼åŒ–  mkfs.ext4    mkfs.xfs
+æŸ¥çœ‹æ–‡ä»¶ç³»ç»Ÿ  blkid
+æŒ‚è½½ä½¿ç”¨      mount 
 
-vgcreate   -s	¾í×éÃû	·ÖÇøÉè±¸
-lvcreate    -n  Ãû×Ö   -L ´óĞ¡  -l pe¸öÊı
+vgcreate   -s	å·ç»„å	åˆ†åŒºè®¾å¤‡
+lvcreate    -n  åå­—   -L å¤§å°  -l peä¸ªæ•°
 lvextend
 
